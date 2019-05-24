@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D46588DA227C297A009B3E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46588D9227C297A009B3E60 /* AppDelegate.swift */; };
-		D46588DC227C297A009B3E60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46588DB227C297A009B3E60 /* ViewController.swift */; };
 		D46588DF227C297A009B3E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46588DD227C297A009B3E60 /* Main.storyboard */; };
 		D46588E1227C297C009B3E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46588E0227C297C009B3E60 /* Assets.xcassets */; };
 		D46588E4227C297C009B3E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46588E2227C297C009B3E60 /* LaunchScreen.storyboard */; };
+		D46588ED227C309A009B3E60 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46588EC227C309A009B3E60 /* Entry.swift */; };
+		D46588F0227C30B3009B3E60 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46588EF227C30B3009B3E60 /* EntryController.swift */; };
+		D476180D227E4BD50010B0C3 /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476180C227E4BD50010B0C3 /* EntryTableViewController.swift */; };
+		D476180F227E4C280010B0C3 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476180E227E4C280010B0C3 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D46588D6227C297A009B3E60 /* Journal-Remake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-Remake.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46588D9227C297A009B3E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D46588DB227C297A009B3E60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D46588DE227C297A009B3E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D46588E0227C297C009B3E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46588E3227C297C009B3E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D46588E5227C297C009B3E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46588EC227C309A009B3E60 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D46588EF227C30B3009B3E60 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		D476180C227E4BD50010B0C3 /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
+		D476180E227E4C280010B0C3 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		D46588D8227C297A009B3E60 /* Journal-Remake */ = {
 			isa = PBXGroup;
 			children = (
-				D46588D9227C297A009B3E60 /* AppDelegate.swift */,
-				D46588DB227C297A009B3E60 /* ViewController.swift */,
+				D46588EB227C2991009B3E60 /* Resources */,
 				D46588DD227C297A009B3E60 /* Main.storyboard */,
+				D4761810227E4C380010B0C3 /* ViewController */,
+				D46588F1227C30BC009B3E60 /* ModelController */,
+				D46588EE227C309F009B3E60 /* Model */,
+			);
+			path = "Journal-Remake";
+			sourceTree = "<group>";
+		};
+		D46588EB227C2991009B3E60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D46588D9227C297A009B3E60 /* AppDelegate.swift */,
 				D46588E0227C297C009B3E60 /* Assets.xcassets */,
 				D46588E2227C297C009B3E60 /* LaunchScreen.storyboard */,
 				D46588E5227C297C009B3E60 /* Info.plist */,
 			);
-			path = "Journal-Remake";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D46588EE227C309F009B3E60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D46588EC227C309A009B3E60 /* Entry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D46588F1227C30BC009B3E60 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				D46588EF227C30B3009B3E60 /* EntryController.swift */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		D4761810227E4C380010B0C3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D476180C227E4BD50010B0C3 /* EntryTableViewController.swift */,
+				D476180E227E4C280010B0C3 /* EntryDetailViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46588DC227C297A009B3E60 /* ViewController.swift in Sources */,
+				D46588F0227C30B3009B3E60 /* EntryController.swift in Sources */,
+				D46588ED227C309A009B3E60 /* Entry.swift in Sources */,
+				D476180D227E4BD50010B0C3 /* EntryTableViewController.swift in Sources */,
+				D476180F227E4C280010B0C3 /* EntryDetailViewController.swift in Sources */,
 				D46588DA227C297A009B3E60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67729QDLYV;
-				INFOPLIST_FILE = "Journal-Remake/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-Remake/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 67729QDLYV;
-				INFOPLIST_FILE = "Journal-Remake/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Journal-Remake/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
